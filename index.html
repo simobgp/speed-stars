@@ -4,27 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+  <!-- Primary SEO -->
   <title>Speed Stars | Play Speed Stars Online Sprint Timing Game</title>
-  <meta name="description" content="Speed Stars is a fast sprint timing game focused on rhythm and precision. Learn how to play, controls, tips, and FAQs. Click the big Play button to play Speed Stars online on Gamulo." />
+  <meta name="description" content="Speed Stars is a fast sprint timing game where rhythm and control matter. Learn how to play, controls, tips, and FAQs. Click the Play button to play Speed Stars online on Gamulo." />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <meta name="theme-color" content="#0b1020" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <!-- Canonical for your GitHub Pages URL -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://simobgp.github.io/speed-stars/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Speed Stars - Play Online Sprint Timing Game" />
-  <meta property="og:description" content="Master rhythm and timing in Speed Stars. Click the big Play button to play Speed Stars online on Gamulo." />
+  <meta property="og:description" content="Master rhythm and timing in Speed Stars. Learn tips, controls, and play Speed Stars online on Gamulo." />
   <meta property="og:url" content="https://simobgp.github.io/speed-stars/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Speed Stars | Play Online" />
-  <meta name="twitter:description" content="A rhythm-based sprint timing game. Learn tips, controls, and play Speed Stars online on Gamulo." />
+  <meta name="twitter:description" content="A rhythm-based sprint timing game. Learn how to play and start instantly on Gamulo." />
 
-  <!-- Single-file CSS -->
+  <!-- Single-file styling -->
   <style>
     :root{
       --bg:#070b18;
@@ -42,9 +43,10 @@
     html,body{margin:0;padding:0}
     body{
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:radial-gradient(1200px 700px at 20% 0%, #15225a 0%, rgba(21,34,90,0) 55%),
-                 radial-gradient(1200px 700px at 80% 10%, #1b3b7a 0%, rgba(27,59,122,0) 60%),
-                 var(--bg);
+      background:
+        radial-gradient(1200px 700px at 20% 0%, #15225a 0%, rgba(21,34,90,0) 55%),
+        radial-gradient(1200px 700px at 80% 10%, #1b3b7a 0%, rgba(27,59,122,0) 60%),
+        var(--bg);
       color:var(--text);
       line-height:1.6;
     }
@@ -59,6 +61,7 @@
     }
     .nav{
       display:flex;gap:12px;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;
     }
     .brand{
       display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.2px;
@@ -75,6 +78,11 @@
       color:var(--muted);font-size:14px
     }
     .menu a:hover{border-color:var(--line);background:rgba(255,255,255,.04);text-decoration:none}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 12px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:var(--muted);font-size:13px;
+    }
     .hero{
       display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch;
       padding:22px 0 8px;
@@ -88,11 +96,6 @@
       overflow:hidden;
     }
     .card .inner{padding:18px}
-    .badge{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:8px 12px;border-radius:999px;border:1px solid var(--line);
-      background:rgba(255,255,255,.04);color:var(--muted);font-size:13px;
-    }
     h1{margin:10px 0 10px;font-size:42px;line-height:1.12;letter-spacing:-.02em}
     @media(max-width:520px){h1{font-size:34px}}
     h2{margin:0 0 10px;font-size:22px;letter-spacing:-.01em}
@@ -141,30 +144,40 @@
     hr{border:0;border-top:1px solid var(--line);margin:14px 0}
   </style>
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Breadcrumb + Game + WebPage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Speed Stars - Play Online",
-    "url":"https://simobgp.github.io/speed-stars/",
-    "description":"SEO landing page for Speed Stars with a dofollow link to play on Gamulo.",
-    "inLanguage":"en-US",
-    "about":{
-      "@type":"VideoGame",
-      "name":"Speed Stars",
-      "genre":["Sports","Arcade"],
-      "gamePlatform":["Web Browser"],
-      "operatingSystem":"Web"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"Gamulo"
-    }
+    "@graph":[
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://simobgp.github.io/speed-stars/"},
+          {"@type":"ListItem","position":2,"name":"Speed Stars","item":"https://simobgp.github.io/speed-stars/"}
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "name":"Speed Stars | Play Speed Stars Online",
+        "url":"https://simobgp.github.io/speed-stars/",
+        "inLanguage":"en-US",
+        "description":"SEO landing page for Speed Stars with a dofollow link to play on Gamulo.",
+        "about":{"@id":"#speedstarsgame"}
+      },
+      {
+        "@type":"VideoGame",
+        "@id":"#speedstarsgame",
+        "name":"Speed Stars",
+        "genre":["Sports","Arcade"],
+        "gamePlatform":["Web Browser"],
+        "operatingSystem":"Web",
+        "description":"A sprint timing game where rhythm, balance, and cadence control your speed."
+      }
+    ]
   }
   </script>
 
-  <!-- FAQ Structured Data -->
+  <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -173,26 +186,17 @@
       {
         "@type":"Question",
         "name":"Can I play Speed Stars online for free?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. You can play Speed Stars online by opening the game page on Gamulo and starting instantly in your browser."
-        }
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. You can play Speed Stars online by opening the game page on Gamulo and starting instantly in your browser."}
       },
       {
         "@type":"Question",
         "name":"Is Speed Stars unblocked?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Some players search 'speed stars unblocked' to find versions that load on restricted networks. Always follow school or network rules and only play where permitted."
-        }
+        "acceptedAnswer":{"@type":"Answer","text":"Some players search 'speed stars unblocked' to find versions that load on restricted networks. Always follow school or network rules and only play where permitted."}
       },
       {
         "@type":"Question",
         "name":"Is Speed Stars the same as Poki Speed Stars?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Searches like 'speed stars poki' can refer to similar hosted versions. Gameplay can vary by site, so the experience may not be identical everywhere."
-        }
+        "acceptedAnswer":{"@type":"Answer","text":"Searches like 'speed stars poki' can refer to similar hosted versions. Gameplay can vary by site, so the experience may not be identical everywhere."}
       }
     ]
   }
@@ -206,14 +210,15 @@
         <span class="logo" aria-hidden="true"></span>
         <span>Speed Stars</span>
       </div>
-      <div class="menu" aria-label="Page menu">
+      <div class="menu" aria-label="On-page navigation">
         <a href="#play">Play</a>
         <a href="#what-is">About</a>
         <a href="#how-to-play">How to Play</a>
+        <a href="#controls">Controls</a>
+        <a href="#tips">Tips</a>
         <a href="#faq">FAQ</a>
         <a href="#privacy">Privacy</a>
         <a href="#terms">Terms</a>
-        <a href="#contact">Contact</a>
       </div>
     </div>
   </div>
@@ -222,48 +227,52 @@
     <span class="badge">⚡ speed stars • speed stars online • speed stars game</span>
 
     <div class="hero">
-      <section class="card" aria-label="Main content">
+      <section class="card">
         <div class="inner">
           <h1>Speed Stars</h1>
           <p>
-            <strong>Speed Stars</strong> is a sprint timing game where rhythm matters more than frantic tapping.
-            Build speed with a steady cadence, keep balance, and finish clean to beat your best time.
+            <strong>Speed Stars</strong> is a sprint timing game where rhythm beats random tapping. Your best runs come from a steady cadence,
+            clean balance, and small adjustments that keep your runner smooth from start to finish.
           </p>
 
+          <!-- ✅ One main DOFOLLOW link to Gamulo (clean backlink) -->
           <div class="cta">
-            <!-- ✅ MAIN DOFOLLOW LINK (no nofollow) -->
             <a class="btn primary" href="https://gamulo.com/game/speed-stars/" target="_blank" rel="noopener">
               ▶ Play Speed Stars on Gamulo
             </a>
             <a class="btn secondary" href="#how-to-play">✅ How to Play</a>
           </div>
 
-          <div class="chips" aria-label="Keyword chips">
+          <p class="small" style="margin-top:12px">
+            US-friendly guide for kids, families, and casual players. Common searches include: <strong>speed stars</strong>,
+            <strong>speed stars unblocked</strong>, <strong>speed stars poki</strong>, and <strong>poki speed stars</strong>.
+          </p>
+
+          <div class="chips" aria-label="Related keywords">
             <span class="chip">speed stars</span>
-            <span class="chip">speed stars online</span>
             <span class="chip">speed stars unblocked</span>
+            <span class="chip">speed star</span>
             <span class="chip">speed stars game</span>
+            <span class="chip">speed stars online</span>
             <span class="chip">speed stars poki</span>
             <span class="chip">poki speed stars</span>
             <span class="chip">akina speed stars</span>
+            <span class="chip">speed star uma musume</span>
+            <span class="chip">uma musume speed star</span>
           </div>
-
-          <p class="small" style="margin-top:12px">
-            This page is written for a US audience (kids, families, and casual players). For the playable version, use the main button above.
-          </p>
         </div>
       </section>
 
-      <aside class="card" aria-label="Quick facts">
+      <aside class="card">
         <div class="inner">
           <h2>Quick facts</h2>
           <ul>
-            <li><strong>Game type:</strong> rhythm + timing sprint</li>
-            <li><strong>Best for:</strong> short runs, retries, personal bests</li>
-            <li><strong>Skill:</strong> cadence control and smooth acceleration</li>
+            <li><strong>Core skill:</strong> timing and rhythm</li>
+            <li><strong>Goal:</strong> sprint fast without losing form</li>
+            <li><strong>Great for:</strong> quick retries and personal bests</li>
           </ul>
           <p class="note" style="margin-top:12px">
-            If you searched “<strong>speed stars unblocked</strong>”, always follow your school or network rules.
+            If you searched “<strong>speed stars unblocked</strong>”, always follow school or network rules and play only where permitted.
           </p>
         </div>
       </aside>
@@ -276,15 +285,15 @@
         <div class="inner">
           <h2>What is Speed Stars?</h2>
           <p>
-            Speed Stars is an arcade-style running game built around cadence. Instead of holding one key,
-            you tap in rhythm to keep your runner efficient. The smoother your timing, the better your speed.
+            Speed Stars is an arcade-style running game built around cadence. Instead of holding one button, you tap in rhythm to create a smooth stride.
+            When your timing is consistent, your runner stays efficient and your finish times improve.
           </p>
           <p>
-            Some players also type <strong>speed star</strong> when searching for the same game. You may also see searches like
-            <strong>speed stars game</strong> and <strong>speed stars online</strong> because people want instant browser play.
+            Some people type <strong>speed star</strong> as a shortcut, but they usually mean the same sprint timing experience.
+            If your goal is instant gameplay, the Play button above takes you to the browser version on Gamulo.
           </p>
           <p class="note">
-            Want to jump in now? <a href="https://gamulo.com/game/speed-stars/" target="_blank" rel="noopener"><strong>Play Speed Stars online on Gamulo</strong></a>.
+            Looking for <strong>Speed Stars online</strong>? Use the big Play button at the top to start on Gamulo.
           </p>
         </div>
       </article>
@@ -293,13 +302,13 @@
         <div class="inner">
           <h2>How to play Speed Stars</h2>
           <ol>
-            <li>Start the run and aim for a calm, steady rhythm.</li>
+            <li>Start the race and set a calm, steady rhythm.</li>
             <li>Tap consistently to build speed without wobbling.</li>
-            <li>If your runner stutters, slow a little and rebuild cadence.</li>
-            <li>Replay to improve your personal best.</li>
+            <li>If the run gets unstable, slow slightly and rebuild cadence.</li>
+            <li>Repeat short attempts to beat your personal best.</li>
           </ol>
           <p class="note">
-            The biggest secret: clean timing usually wins over faster, messy tapping.
+            Fast runs usually come from <strong>stable timing</strong>, not from tapping as hard as possible.
           </p>
         </div>
       </article>
@@ -310,25 +319,24 @@
         <div class="inner">
           <h2>Controls</h2>
           <p>
-            Controls can vary slightly depending on device and hosting version, but the goal stays the same:
-            keep your stride rhythm steady.
+            Controls can vary by device and hosting version, but the idea stays the same: keep your step rhythm steady and avoid chaotic inputs.
           </p>
           <ul>
-            <li><span class="kbd">Mouse</span> or <span class="kbd">Touch</span>: tap in an even cadence.</li>
+            <li><span class="kbd">Mouse</span> / <span class="kbd">Touch</span>: tap in an even cadence.</li>
             <li><span class="kbd">Keyboard</span>: some versions use alternating keys for steps.</li>
-            <li><span class="kbd">Full screen</span>: helps you focus on timing and reduce distractions.</li>
+            <li><span class="kbd">Full screen</span>: helps you focus and improves timing consistency.</li>
           </ul>
         </div>
       </article>
 
       <article class="card" id="tips">
         <div class="inner">
-          <h2>Tips for faster times</h2>
+          <h2>Tips for better times</h2>
           <ul>
-            <li><strong>Start stable:</strong> lock a safe rhythm first, then speed up gradually.</li>
-            <li><strong>Fix wobble early:</strong> if the run looks unstable, slow slightly and rebuild control.</li>
-            <li><strong>Short practice:</strong> a few focused runs often beat many rushed attempts.</li>
-            <li><strong>Stay consistent:</strong> steady tempo usually creates better finishes.</li>
+            <li><strong>Start smooth:</strong> lock a safe rhythm first, then speed up gradually.</li>
+            <li><strong>Fix wobble early:</strong> if the run looks messy, reset your cadence instead of forcing speed.</li>
+            <li><strong>Practice in bursts:</strong> 3 to 5 focused attempts beat 20 rushed tries.</li>
+            <li><strong>Stay consistent:</strong> steady tempo usually wins over random fast taps.</li>
           </ul>
         </div>
       </article>
@@ -340,93 +348,69 @@
 
         <h3>Can I play Speed Stars online for free?</h3>
         <p>
-          Yes. If you want instant browser play, use the main gameplay link:
-          <a href="https://gamulo.com/game/speed-stars/" target="_blank" rel="noopener"><strong>Speed Stars on Gamulo</strong></a>.
+          Yes. Open the game page on Gamulo and start instantly in your browser using the Play button at the top.
         </p>
 
         <h3>Is Speed Stars unblocked?</h3>
         <p>
-          Some people search <strong>speed stars unblocked</strong> to find versions that load on restricted networks.
-          Always follow school rules and only play where permitted.
+          People search <strong>speed stars unblocked</strong> to find versions that load on restricted networks. Always follow school and network rules.
         </p>
 
         <h3>Is this the same as “Poki Speed Stars”?</h3>
         <p>
-          Searches like <strong>speed stars poki</strong> or <strong>poki speed stars</strong> can point to similar hosted versions.
-          Gameplay may vary depending on the site and version.
-        </p>
-
-        <h3>What about “Akina Speed Stars”?</h3>
-        <p>
-          The phrase <strong>akina speed stars</strong> sometimes appears in keyword tools, but it is not widely documented as an official mode.
-          Treat it as a search term unless your game version explicitly mentions it.
+          Searches like <strong>speed stars poki</strong> or <strong>poki speed stars</strong> can refer to similar hosted versions. Gameplay can differ by site.
         </p>
 
         <h3>Why do people search “speed star uma musume”?</h3>
         <p>
-          Terms like <strong>speed star uma musume</strong> and <strong>uma musume speed star</strong> may appear because of cross-interest in “speed” themes.
-          This page focuses on the browser sprint timing game Speed Stars.
+          Terms like <strong>speed star uma musume</strong> and <strong>uma musume speed star</strong> often appear because of shared interest in “speed” themes.
+          This page is focused on the sprint timing game Speed Stars.
         </p>
 
         <h3>What is “tatsunoko vs capcom ultimate all stars speed racer”?</h3>
         <p>
-          That long query is unrelated to Speed Stars and can show up as a mixed suggestion in some keyword tools.
-          It is not a Speed Stars mode.
+          That long query is unrelated to Speed Stars and can show up in keyword tools as a mixed suggestion. It is not a Speed Stars mode.
         </p>
       </div>
     </section>
 
     <section class="card" id="privacy" style="margin-top:18px">
       <div class="inner">
-        <h2>Privacy Policy (simple)</h2>
+        <h2>Privacy Policy</h2>
         <p>
-          This GitHub Pages site is a simple informational page. We do not collect personal information, do not run ads,
-          and do not use tracking cookies on purpose. If you click an external link, you will go to a third-party website
-          with its own privacy rules.
+          This site is a simple informational page hosted on GitHub Pages. We do not intentionally collect personal data, do not run ads,
+          and do not set tracking cookies on purpose. If you click an external link, you will visit a third-party site with its own policies.
         </p>
-        <p class="small"><strong>Effective date:</strong> <span data-date>2025-12-31</span></p>
+        <p class="small"><strong>Effective date:</strong> <span id="effdate">December 31, 2025</span></p>
       </div>
     </section>
 
     <section class="card" id="terms" style="margin-top:18px">
       <div class="inner">
-        <h2>Terms of Use (simple)</h2>
+        <h2>Terms of Use</h2>
         <p>
-          This site provides general information about the game Speed Stars for educational and navigation purposes.
-          All trademarks and names belong to their respective owners. This page is not an official publisher site.
+          This page provides general information about Speed Stars for navigation and educational purposes. All names and trademarks belong to their
+          respective owners. This is not an official publisher website.
         </p>
         <p>
-          By using this website, you agree that the content is provided “as is” and that you use external links at your own choice.
-        </p>
-      </div>
-    </section>
-
-    <section class="card" id="contact" style="margin-top:18px">
-      <div class="inner">
-        <h2>Contact</h2>
-        <p>
-          For corrections or requests about this page, you can contact the site owner using GitHub.
-        </p>
-        <p class="small">
-          Tip: You can add a real email later if you want. For now this is enough for GitHub Pages trust.
+          Content is provided “as is” with no warranties. You use external links by your own choice.
         </p>
       </div>
     </section>
 
     <div class="footer">
       <p>
-        © <span data-year></span> Speed Stars info page (GitHub Pages). To play, use the dofollow gameplay link to Gamulo above.
+        © <span id="year"></span> Speed Stars info page (GitHub Pages). Ready to play?
+        <a href="https://gamulo.com/game/speed-stars/" target="_blank" rel="noopener"><strong>Play Speed Stars on Gamulo</strong></a>.
       </p>
     </div>
   </main>
 
   <script>
-    // small helper (no tracking)
     document.addEventListener("DOMContentLoaded", () => {
-      const year = document.querySelector("[data-year]");
-      if (year) year.textContent = new Date().getFullYear();
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
     });
   </script>
 </body>
 </html>
-
