@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simobgp.github.io/speed-stars/sitemap.xml
